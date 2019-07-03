@@ -4,12 +4,9 @@ import { Link } from 'react-router-dom';
 function Header() {
   return(
     <div>
-      <h1>Rogue</h1>
-      <Link to="/beer">Beer</Link> | 
-      <Link to="/pubs">Pubs</Link> | 
-      <Link to="/find">Find</Link> | 
-      <Link to="/store">Store</Link> | 
-      <Link to="/join">Join</Link>
+      <Link to="/hamburger">///</Link>
+      <Link to="/"><h1>Rogue</h1></Link>
+      
     </div>
   ); 
 } 
