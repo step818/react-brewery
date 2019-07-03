@@ -12,6 +12,10 @@ function Home() {
       <p>ROGUE ALES & SPIRITS
       2320 OSU DRIVE
       NEWPORT OR 97365</p>
+      <Link to="/contact">Contact Us</Link> | 
+      <Link to="/jobs">Work at Rogue</Link> | 
+      <Link to="/find">Find Rogue</Link> | 
+      <Link to="/About">About Us</Link> 
     </div>
   );
 }
