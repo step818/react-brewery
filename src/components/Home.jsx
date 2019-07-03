@@ -15,7 +15,7 @@ function Home() {
       <Link to="/contact">Contact Us</Link> | 
       <Link to="/jobs">Work at Rogue</Link> | 
       <Link to="/find">Find Rogue</Link> | 
-      <Link to="/About">About Us</Link> 
+      <Link to="/about">About Us</Link> 
     </div>
   );
 }

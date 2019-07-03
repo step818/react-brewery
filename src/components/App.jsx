@@ -6,6 +6,10 @@ import Home from './Home';
 import Hamburger from './Hamburger';
 import Beer from './Beer';
 import Pubs from './Pubs';
+import Find from './Find';
+import Store from './Store';
+import Join from './Join';
+import Contact from './Contact';
 
 function App() {
   return(
@@ -16,6 +20,10 @@ function App() {
         <Route path='/hamburger' component={Hamburger}/>
         <Route path='/beer' component={Beer}/>
         <Route path='/pubs' component={Pubs}/>
+        <Route path='/find' component={Find}/>
+        <Route path='/store' component={Store}/>
+        <Route path='/join' component={Join}/>
+        <Route path='/contact' component={Contact}/>
       </Switch>
     </div>
   );
