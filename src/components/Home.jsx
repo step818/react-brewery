@@ -1,14 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import mainPagePicture from '../assets/images/homepagebackground.jpg';
 
 function Home() {
   return(
     <div>
+      <style jsx>{`
+        div {
+        }
+      `}</style>
       <Link to="/beer">Beer</Link> | 
       <Link to="/pubs">Pubs</Link> | 
       <Link to="/find">Find</Link> | 
       <Link to="/store">Store</Link> | 
       <Link to="/join">Join</Link>
+      <img src={mainPagePicture}/>
       <p>ROGUE ALES & SPIRITS
       2320 OSU DRIVE
       NEWPORT OR 97365</p>
