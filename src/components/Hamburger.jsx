@@ -6,7 +6,7 @@ function Hamburger() {
     <div>
       <h3>
         <Link to="/find">FIND ROGUE</Link><br></br>
-        <Link to="/stories">OUR STORIES</Link><br></br> 
+        <Link to="/about">ABOUT US</Link><br></br> 
         <Link to="/join">JOIN US</Link><br></br> 
         <Link to="/beer">BEERS</Link><br></br>
         <Link to="/pubs">ROGUE PUBS</Link><br></br>

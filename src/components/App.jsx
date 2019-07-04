@@ -10,6 +10,9 @@ import Find from './Find';
 import Store from './Store';
 import Join from './Join';
 import Contact from './Contact';
+import Jobs from './Jobs';
+import About from './About';
+import Events from './Events';
 
 function App() {
   return(
@@ -24,6 +27,9 @@ function App() {
         <Route path='/store' component={Store}/>
         <Route path='/join' component={Join}/>
         <Route path='/contact' component={Contact}/>
+        <Route path='/jobs' component={Jobs}/>
+        <Route path='/about' component={About}/>
+        <Route path='/events' component={Events}/>
       </Switch>
     </div>
   );

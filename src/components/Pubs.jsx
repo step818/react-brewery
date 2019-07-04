@@ -18,7 +18,6 @@ function Pubs() {
       <Link to="/about">About</Link> | 
       <Link to="/contact">Contact Us</Link> | 
       <Link to="/jobs">Jobs</Link> | 
-      <Link to="/stories">Rogue Foundation</Link> | 
       <Link to="/store">Store</Link>
       <p>© 2019 Rogue Ales & Spirits all rights reserved</p>
     </div>
