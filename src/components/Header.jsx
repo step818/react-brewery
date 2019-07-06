@@ -15,7 +15,6 @@ function Header() {
               font-size: xx-large;
               font-family: Courier New;
               display: grid;
-              border: 1px solid black;
               padding-right: 15%;
       }
 
@@ -24,14 +23,13 @@ function Header() {
           float: left;
           left:20%;
           display: grid;
-          border solid 1px;
           justify-self: center;
           margin-top: 50%;
           margin-left: 50%;
 
       }
       `}</style>
-      <div className="men"><Link to="/hamburger"><img src={menuIcon} /></Link></div>
+      <div className="menu"><Link to="/hamburger"><img src={menuIcon} /></Link></div>
       <div className="header"><Link to="/"><h1>ROGUE</h1></Link></div>
       
     </div>

@@ -7,15 +7,17 @@ function Home() {
     <div>
       <style jsx>{`
         .topLinks {
-      
+          text-align: center;
+          word-spacing: 1em;
+          font-size: x-large;
         }
       `}</style>
       <div className="topLinks">
         <Link to="/beer">Beer</Link> | 
-        <Link to="/pubs">Pubs</Link> | 
-        <Link to="/find">Find</Link> | 
-        <Link to="/store">Store</Link> | 
-        <Link to="/join">Join</Link>
+        <Link to="/pubs"> Pubs</Link> | 
+        <Link to="/find"> Find</Link> | 
+        <Link to="/store"> Store</Link> | 
+        <Link to="/join"> Join</Link>
       </div>
       <img src={mainPagePicture}/>
       <p>ROGUE ALES & SPIRITS
