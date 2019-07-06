@@ -6,14 +6,17 @@ function Home() {
   return(
     <div>
       <style jsx>{`
-        div {
+        .topLinks {
+      
         }
       `}</style>
-      <Link to="/beer">Beer</Link> | 
-      <Link to="/pubs">Pubs</Link> | 
-      <Link to="/find">Find</Link> | 
-      <Link to="/store">Store</Link> | 
-      <Link to="/join">Join</Link>
+      <div className="topLinks">
+        <Link to="/beer">Beer</Link> | 
+        <Link to="/pubs">Pubs</Link> | 
+        <Link to="/find">Find</Link> | 
+        <Link to="/store">Store</Link> | 
+        <Link to="/join">Join</Link>
+      </div>
       <img src={mainPagePicture}/>
       <p>ROGUE ALES & SPIRITS
       2320 OSU DRIVE
@@ -21,7 +24,7 @@ function Home() {
       <Link to="/contact">Contact Us</Link> | 
       <Link to="/jobs">Work at Rogue</Link> | 
       <Link to="/find">Find Rogue</Link> | 
-      <Link to="/about">About Us</Link> 
+      <Link to="/about">About Us</Link>
     </div>
   );
 }
