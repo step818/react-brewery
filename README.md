@@ -11,7 +11,7 @@
 This exercise is designed to be a hub for DIY and "How-to" projects uploaded by users and searchable for other patrons to view. Using Angular CLI, this is practice in setting up ng, routing to nested components, sending data down with inputs, passing actions up with EventEmitters, and filtering data with pipes. The page will have a section for uploading projects, where a series of forms will be filled out until the overall form is submitted in to a database. Users will be able to search for relevant projects on how to do or make a project and the respective "how-to's" will display their title. Then a user can click the title to get to the details of the step-by-step instructable.
 
 
-![Brewery Component Tree](Brewery-Component-Tree.jpg)
+![Brewery Component Tree](/src/assets/images/Brewery-Component-Tree.jpg)
 
 ### Specs
 
