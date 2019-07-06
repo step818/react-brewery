@@ -10,7 +10,8 @@ function Beer() {
       <Link to="/about">About</Link> | 
       <Link to="/contact">Contact Us</Link> | 
       <Link to="/jobs">Jobs</Link> |  
-      <Link to="/store">Store</Link>
+      <Link to="/store">Store</Link> | 
+      <Link to="/manage">Manage</Link>
       <p>© 2019 Rogue Ales & Spirits all rights reserved</p>
     </div>
   );

@@ -13,6 +13,7 @@ import Contact from './Contact';
 import Jobs from './Jobs';
 import About from './About';
 import Events from './Events';
+import Manage from './Manage';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path='/jobs' component={Jobs}/>
         <Route path='/about' component={About}/>
         <Route path='/events' component={Events}/>
+        <Route path='/manage' component={Manage}/>
       </Switch>
     </div>
   );
