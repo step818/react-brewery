@@ -8,7 +8,7 @@
 
 ## Description
 
-This exercise is designed to be a hub for DIY and "How-to" projects uploaded by users and searchable for other patrons to view. Using Angular CLI, this is practice in setting up ng, routing to nested components, sending data down with inputs, passing actions up with EventEmitters, and filtering data with pipes. The page will have a section for uploading projects, where a series of forms will be filled out until the overall form is submitted in to a database. Users will be able to search for relevant projects on how to do or make a project and the respective "how-to's" will display their title. Then a user can click the title to get to the details of the step-by-step instructable.
+This exercise is designed to demonstrate a website created with the React library with minimal functionality and some styling. In fact, the project has no state and is static help just get the fundamentals down and make a good habit of structuring the UI first, and then adding state to all necessary components after. This website is a mock of a brewery that its main feature is going to be selling beer to patrons. When a patron buys a pint of beer, a button that deduces the amount of available inventory will change the state of the page to display the new number available. For now, it is just static.
 
 
 ![Brewery Component Tree](/src/assets/images/Brewery-Component-Tree.jpg)
@@ -33,13 +33,11 @@ This exercise is designed to be a hub for DIY and "How-to" projects uploaded by 
 2. Install the required packages:
 
        $ npm install
-3. Acquire your _own_ Firebase credentials and place them in the appropriate files, with the appropriate variable names.
-
-       You'll need an apiKey, authDomain, databaseURL, and messagingSenderId 
-4. Build the application:
+       
+3. Build the application:
 
        $ npm run build
-5. Run the application:
+4. Run the application:
 
        $ npm run start
 
@@ -65,31 +63,6 @@ _Windows 10.1, Visual Studio Code _
 *Licensed under the GPL License*
 Copyright (c) 2019 **_Stephen Trewick_**
 
-
-
-# HowTo
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
