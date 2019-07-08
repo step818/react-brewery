@@ -7,17 +7,17 @@ var masterBeerList = [
   {
     name: 'OUTTA LINE IPA',
     price: '5.5',
-    amount: 124
+    pints: 124
   },
   {
     name: 'BASQUATCH',
     price: '4.5',
-    amount: 124
+    pints: 124
   },
   {
     name: 'DEAD GUY ALE',
     price: '5',
-    amount: 124
+    pints: 124
   }
 ];
 
@@ -31,7 +31,7 @@ function Beer() {
       {masterBeerList.map((beer,index) => 
         <BeerFormat name={beer.name} 
           price={beer.price}
-          amount={beer.amount} 
+          pints={beer.pints} 
           key= {index}/>
       )}
 
