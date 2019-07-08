@@ -2,25 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BeerFormat from './BeerFormat';
 
-
-var masterBeerList = [
-  {
-    name: 'OUTTA LINE IPA',
-    price: '5.5',
-    pints: 124
-  },
-  {
-    name: 'BASQUATCH',
-    price: '4.5',
-    pints: 124
-  },
-  {
-    name: 'DEAD GUY ALE',
-    price: '5',
-    pints: 124
-  }
-];
-
 function Beer() {
   return(
     <div>

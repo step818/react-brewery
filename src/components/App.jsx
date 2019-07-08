@@ -16,26 +16,43 @@ import Events from './Events';
 import Manage from './Manage';
 import NewBeerControl from './NewBeerControl';
 
-function App() {
-  return(
-    <div>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route path='/hamburger' component={Hamburger}/>
-        <Route path='/beer' component={Beer}/>
-        <Route path='/pubs' component={Pubs}/>
-        <Route path='/find' component={Find}/>
-        <Route path='/store' component={Store}/>
-        <Route path='/join' component={Join}/>
-        <Route path='/contact' component={Contact}/>
-        <Route path='/jobs' component={Jobs}/>
-        <Route path='/about' component={About}/>
-        <Route path='/events' component={Events}/>
-        <Route path='/manage' component={NewBeerControl}/>
-      </Switch>
-    </div>
-  );
+class App extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterBeerList: []
+    };
+    this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+  }
+
+  handleAddingNewBeerToList(newBeer) {
+    var newMasterBeerList = this.state.masterBeerList.slice();
+    newMasterBeerList.push(newBeer);
+    this.setState({masterBeerList: newMasterBeerList});
+  }
+
+  render(){
+    return(
+      <div>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/hamburger' component={Hamburger}/>
+          <Route path='/beer' component={Beer}/>
+          <Route path='/pubs' component={Pubs}/>
+          <Route path='/find' component={Find}/>
+          <Route path='/store' component={Store}/>
+          <Route path='/join' component={Join}/>
+          <Route path='/contact' component={Contact}/>
+          <Route path='/jobs' component={Jobs}/>
+          <Route path='/about' component={About}/>
+          <Route path='/events' component={Events}/>
+          <Route path='/manage' component={NewBeerControl}/>
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
