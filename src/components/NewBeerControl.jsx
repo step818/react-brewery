@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import ConfirmationQuestions from './ConfirmationQuestions';
 import Manage from './Manage';
 
@@ -19,7 +21,7 @@ class NewBeerControl extends React.Component {
     render(){
         let currentlyVisibleContent = null;
         if (this.state.formVisibleOnPage){
-            currentlyVisibleContent = <Manage/>;
+            currentlyVisibleContent = <Manage onNewBeerCreation={this.props.onNewBeerCreation}/>;
         } else {
             currentlyVisibleContent = <ConfirmationQuestions onClickYes={this.handleClickYes} />;
         }
@@ -30,5 +32,9 @@ class NewBeerControl extends React.Component {
         );
     }
 }
+
+NewBeerControl.propTypes = {
+    onNewBeerCreation: PropTypes.func
+};
 
 export default NewBeerControl;

@@ -39,7 +39,7 @@ class App extends React.Component{
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/hamburger' component={Hamburger}/>
-          <Route path='/beer' component={Beer}/>
+          <Route path='/beer' render={() => <Beer beerList={this.state.masterBeerList}/>}/>
           <Route path='/pubs' component={Pubs}/>
           <Route path='/find' component={Find}/>
           <Route path='/store' component={Store}/>
@@ -48,7 +48,7 @@ class App extends React.Component{
           <Route path='/jobs' component={Jobs}/>
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
-          <Route path='/manage' component={NewBeerControl}/>
+          <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
         </Switch>
       </div>
     );

@@ -1,16 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Manage() {
+function Manage(props) {
   let _name=null;
   let _price=null;
   let _pints=null;
 
   function handleNewBeerFormSubmission(e){
     e.preventDefault();
-    console.log(_name.value);
-    console.log(_price.value);
-    console.log(_pints.value);
-    _names.value = '';
+    props.onNewBeerCreation({name: _name.value, price: _price.value, pints: _pints.value});
+    _name.value = '';
     _price.value = '';
     _pints.value = '';
   }
@@ -39,5 +38,9 @@ function Manage() {
     </div>
   );
 }
+
+Manage.propTypes = {
+  onNewBeerCreation: PropTypes.func
+};
 
 export default Manage;
