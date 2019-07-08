@@ -1,9 +1,15 @@
 import React from 'react';
 
 function Manage() {
+
+  function handleNewBeerFormSubmission(e){
+    e.preventDefault();
+    
+  }
+
   return(
     <div>
-      <form>
+      <form onSubmit={handleNewBeerFormSubmission}>
         <label>Beer Name</label>
         <input
           type='text'
