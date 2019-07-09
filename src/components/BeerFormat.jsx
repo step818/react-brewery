@@ -5,7 +5,7 @@ function BeerFormat(props) {
   return(
     <div>
       <h3>{props.name} - - - {props.price}</h3>
-      <h4>Amount left in keg - - - {props.pints}</h4>
+      <h4>Amount left in keg - - - {props.pints} pints</h4>
       <button>Minus 1 pint</button>
       <hr/>
     </div>

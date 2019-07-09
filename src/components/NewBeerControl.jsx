@@ -6,35 +6,35 @@ import Manage from './Manage';
 
 class NewBeerControl extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state={
-            formVisibleOnPage: false
-        };
-        this.handleClickYes = this.handleClickYes.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.state={
+      formVisibleOnPage: false
+    };
+    this.handleClickYes = this.handleClickYes.bind(this);
+  }
 
-    handleClickYes(){
-        this.setState({formVisibleOnPage: true});
-    }
+  handleClickYes(){
+    this.setState({formVisibleOnPage: true});
+  }
 
-    render(){
-        let currentlyVisibleContent = null;
-        if (this.state.formVisibleOnPage){
-            currentlyVisibleContent = <Manage onNewBeerCreation={this.props.onNewBeerCreation}/>;
-        } else {
-            currentlyVisibleContent = <ConfirmationQuestions onClickYes={this.handleClickYes} />;
-        }
-        return(
-            <div>
-                {currentlyVisibleContent}
-            </div>
-        );
+  render(){
+    let currentlyVisibleContent = null;
+    if (this.state.formVisibleOnPage){
+      currentlyVisibleContent = <Manage onNewBeerCreation={this.props.onNewBeerCreation}/>;
+    } else {
+      currentlyVisibleContent = <ConfirmationQuestions onClickYes={this.handleClickYes} />;
     }
+    return(
+      <div>
+        {currentlyVisibleContent}
+      </div>
+    );
+  }
 }
 
 NewBeerControl.propTypes = {
-    onNewBeerCreation: PropTypes.func
+  onNewBeerCreation: PropTypes.func
 };
 
 export default NewBeerControl;

@@ -27,11 +27,10 @@ function Manage(props) {
           type='text'
           id='price'
           ref={(input) => {_price = input;}} />
-        <label>Amount in keg</label>
+        <label>Amount of pints in keg (standard size keg is 124 pints)</label>
         <input
           type='text'
           id='pints'
-          placeholder='124'
           ref={(input) => {_pints = input;}} />
         <button type='submit'>Submit</button>
       </form>
