@@ -25,20 +25,20 @@ class App extends React.Component{
       masterBeerList: {},
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+    this.handleSellingPint = this.handleSellingPint.bind(this);
   }
-  //New decrement function neeeds fixing
-  handleDecrement(pint) {
-    const pints = [...this.state.pints];
-    const index = pints.indexOf(pint);
-    pints[index] = { pint };
-    pints[index].value--;
-    this.setState({ pints });
-  }
+ 
 
   handleAddingNewBeerToList(newBeer) {
     var newBeerId = v4();
     var newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeerId]: newBeer
     });
+    this.setState({masterBeerList: newMasterBeerList});
+  }
+
+  handleSellingPint(beerId) {
+    var newMasterBeerList = Object.assign({}, this.state.masterBeerList);
+    newMasterBeerList[beerId].pints = newMasterBeerList[beerId].pints-1;
     this.setState({masterBeerList: newMasterBeerList});
   }
 
@@ -49,7 +49,7 @@ class App extends React.Component{
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/hamburger' component={Hamburger}/>
-          <Route path='/beer' render={() => <Beer beerList={this.state.masterBeerList}/>}/>
+          <Route path='/beer' render={() => <Beer beerList={this.state.masterBeerList} onSellingPint={this.handleSellingPint}/>}/>
           <Route path='/pubs' component={Pubs}/>
           <Route path='/find' component={Find}/>
           <Route path='/store' component={Store}/>
@@ -59,7 +59,7 @@ class App extends React.Component{
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
           <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
-          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList} onDecrement={this.handleDecrement}/>}/>
+          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList} />}/>
         </Switch>
       </div>
     );

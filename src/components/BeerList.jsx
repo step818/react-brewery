@@ -12,15 +12,16 @@ function BeerList(props){
         return <BeerFormat name={beer.name}
           price={beer.price}
           pints={beer.pints}
+          onSellingPint={props.onSellingPint}
           key={beerId}
-          beerId={beerId}
-          onDecrement={this.props.onDecrement} />;
+          beerId={beerId}/>;
       })}
     </div>
   );
 }
 
 BeerList.propTypes = {
+  onSellingPint: PropTypes.func,
   beerList: PropTypes.object
 };
 
