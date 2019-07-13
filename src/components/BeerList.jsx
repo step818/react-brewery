@@ -13,7 +13,8 @@ function BeerList(props){
           price={beer.price}
           pints={beer.pints}
           key={beerId}
-          beerId={beerId} />;
+          beerId={beerId}
+          onDecrement={this.props.onDecrement} />;
       })}
     </div>
   );

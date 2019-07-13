@@ -26,6 +26,14 @@ class App extends React.Component{
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
+  //New decrement function neeeds fixing
+  handleDecrement(pint) {
+    const pints = [...this.state.pints];
+    const index = pints.indexOf(pint);
+    pints[index] = { pint };
+    pints[index].value--;
+    this.setState({ pints });
+  }
 
   handleAddingNewBeerToList(newBeer) {
     var newBeerId = v4();
@@ -51,7 +59,7 @@ class App extends React.Component{
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
           <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
-          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList}/>}/>
+          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList} onDecrement={this.handleDecrement}/>}/>
         </Switch>
       </div>
     );
