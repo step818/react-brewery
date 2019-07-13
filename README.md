@@ -11,7 +11,7 @@
 This exercise is designed to demonstrate a website created with the React library with minimal functionality and some styling. In fact, the project has no state and is static help just get the fundamentals down and make a good habit of structuring the UI first, and then adding state to all necessary components after. This website is a mock of a brewery that its main feature is going to be selling beer to patrons. When a patron buys a pint of beer, a button that deduces the amount of available inventory will change the state of the page to display the new number available. For now, it is just static.
 
 
-![Brewery Component Tree](/src/assets/images/Brewery-Component-Tree.jpg)
+![Brewery Component Tree](/src/assets/images/Taproom-Component-Tree.jpg)
 
 ### Specs
 
