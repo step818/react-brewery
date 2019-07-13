@@ -16,7 +16,16 @@ function Manage(props) {
 
   return(
     <div>
-      <form onSubmit={handleNewBeerFormSubmission}>
+      <style jsx>{`
+        .background {
+          display: grid;
+          background-color: black;
+          color: beige;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 3px;
+        }
+      `}</style>
+      <form className="background" onSubmit={handleNewBeerFormSubmission}>
         <label>Beer Name</label>
         <input
           type='text'

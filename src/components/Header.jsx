@@ -30,7 +30,7 @@ function Header() {
       }
       `}</style>
       <div className="menu"><Link to="/hamburger"><img src={menuIcon} /></Link></div>
-      <div className="header"><Link to="/"><h1>ROGUE</h1></Link></div>
+      <div className="header"><Link to="/"><h1 style={{color: 'brown'}}>ROGUE</h1></Link></div>
       
     </div>
   ); 

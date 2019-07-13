@@ -59,7 +59,7 @@ class App extends React.Component{
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
           <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
-          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList} />}/>
+          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList} onSellingPint={this.handleSellingPint}/>}/>
         </Switch>
       </div>
     );

@@ -7,12 +7,13 @@ function Admin(props) {
   return(
     <div>
       <h2>Admin</h2>
-      <BeerList beerList={props.beerList}/>
+      <BeerList beerList={props.beerList} onSellingPint={props.onSellingPint}/>
     </div>
   );
 }
 
 Admin.propTypes = {
+  onSellingPint: PropTypes.func,
   beerList: PropTypes.object
 };
 

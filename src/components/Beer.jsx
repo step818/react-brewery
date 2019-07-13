@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import bg from '../assets/images/beers-page-crop.jpg';
+import bg from '../assets/images/glasses.png';
 
 import BeerList from './BeerList';
 
 function Beer(props) {
 
   var body = {
+    display: 'grid',
     backgroundImage: `url(${bg})`,
-    height: '400px',
+    objectFit: 'contain',
+    maxWidth: '100%',
+    height: '200px',
+    
+
   };
 
   return(
