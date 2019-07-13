@@ -19,7 +19,8 @@
     "react-router-dom": "^4.0.0",
     "rebase": "^0.3.0",
     "rebass": "^3.1.1",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

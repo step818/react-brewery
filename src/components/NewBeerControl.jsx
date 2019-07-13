@@ -21,7 +21,7 @@ class NewBeerControl extends React.Component {
   render(){
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <Manage onNewBeerCreation={this.props.onNewBeerCreation}/>;
+      currentlyVisibleContent = <Manage beerList={this.state.masterBeerList} onNewBeerCreation={this.props.onNewBeerCreation}/>;
     } else {
       currentlyVisibleContent = <ConfirmationQuestions onClickYes={this.handleClickYes} />;
     }
@@ -34,6 +34,7 @@ class NewBeerControl extends React.Component {
 }
 
 NewBeerControl.propTypes = {
+  beerList: PropTypes.object,
   onNewBeerCreation: PropTypes.func
 };
 

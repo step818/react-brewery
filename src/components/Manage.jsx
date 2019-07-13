@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 function Manage(props) {
   let _name=null;
   let _price=null;
@@ -39,6 +40,7 @@ function Manage(props) {
 }
 
 Manage.propTypes = {
+  beerList: PropTypes.object,
   onNewBeerCreation: PropTypes.func
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { v4 } from 'uuid';
 
 import Header from './Header';
 import Home from './Home';
@@ -13,7 +14,6 @@ import Contact from './Contact';
 import Jobs from './Jobs';
 import About from './About';
 import Events from './Events';
-import Manage from './Manage';
 import NewBeerControl from './NewBeerControl';
 
 class App extends React.Component{
@@ -21,14 +21,15 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: []
+      masterBeerList: {},
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
 
   handleAddingNewBeerToList(newBeer) {
-    var newMasterBeerList = this.state.masterBeerList.slice();
-    newMasterBeerList.push(newBeer);
+    var newBeerId = v4();
+    var newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeerId]: newBeer
+    });
     this.setState({masterBeerList: newMasterBeerList});
   }
 
@@ -48,7 +49,7 @@ class App extends React.Component{
           <Route path='/jobs' component={Jobs}/>
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
-          <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
+          <Route path='/manage' render={() => <NewBeerControl beerList={this.state.masterBeerList} onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
         </Switch>
       </div>
     );
