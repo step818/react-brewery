@@ -15,6 +15,7 @@ import Jobs from './Jobs';
 import About from './About';
 import Events from './Events';
 import NewBeerControl from './NewBeerControl';
+import Admin from './Admin';
 
 class App extends React.Component{
 
@@ -49,7 +50,8 @@ class App extends React.Component{
           <Route path='/jobs' component={Jobs}/>
           <Route path='/about' component={About}/>
           <Route path='/events' component={Events}/>
-          <Route path='/manage' render={() => <NewBeerControl beerList={this.state.masterBeerList} onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
+          <Route path='/manage' render={() => <NewBeerControl onNewBeerCreation={this.handleAddingNewBeerToList}/>}/>
+          <Route path='/admin' render={()=><Admin beerList={this.state.masterBeerList}/>}/>
         </Switch>
       </div>
     );

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 function Manage(props) {
   let _name=null;
   let _price=null;
@@ -30,7 +29,7 @@ function Manage(props) {
           ref={(input) => {_price = input;}} />
         <label>Amount of pints in keg (standard size keg is 124 pints)</label>
         <input
-          type='text'
+          type='number'
           id='pints'
           ref={(input) => {_pints = input;}} />
         <button type='submit'>Submit</button>
